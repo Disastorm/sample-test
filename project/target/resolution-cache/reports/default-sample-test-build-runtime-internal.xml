@@ -9,39 +9,39 @@
 		extra-sbtVersion="0.13"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150811185836"/>
+		date="20150814075551"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-play-ebean">
-			<revision name="1.0.0" status="release" pubdate="20150526223843" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" homepage="https://github.com/playframework/play-ebean" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="111">
+			<revision name="1.0.0" status="release" pubdate="20150526223843" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ebean" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="111">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2355" time="6948" location="C:\Users\StevenMartel\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-play-ebean\ivy-1.0.0.xml" searched="true" original-local-location="C:\Users\StevenMartel\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-play-ebean\ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2357" time="0" location="C:\Users\StevenMartel\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-play-ebean\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
 				<caller organisation="default" name="sample-test-build" conf="compile, runtime-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-play-ebean" type="jar" ext="jar" status="successful" details="" size="25260" time="16564" location="C:\Users\StevenMartel\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-play-ebean\jars\sbt-play-ebean-1.0.0.jar">
+					<artifact name="sbt-play-ebean" type="jar" ext="jar" status="no" details="" size="25260" time="0" location="C:\Users\StevenMartel\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-play-ebean\jars\sbt-play-ebean-1.0.0.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/1.0.0/jars/sbt-play-ebean.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.avaje.ebeanorm" name="avaje-ebeanorm-agent">
-			<revision name="4.5.3" status="release" pubdate="20150420015655" resolver="public" artresolver="public" homepage="http://www.avaje.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="112">
+			<revision name="4.5.3" status="release" pubdate="20150420015655" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.avaje.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="112">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="3584" time="829" location="C:\Users\StevenMartel\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\ivy-4.5.3.xml" searched="true" original-local-location="C:\Users\StevenMartel\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\ivy-4.5.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.5.3/avaje-ebeanorm-agent-4.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="5218" time="0" location="C:\Users\StevenMartel\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\ivy-4.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.5.3/avaje-ebeanorm-agent-4.5.3.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-play-ebean" conf="compile" rev="4.5.3" rev-constraint-default="4.5.3" rev-constraint-dynamic="4.5.3" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="avaje-ebeanorm-agent" type="jar" ext="jar" status="successful" details="" size="218641" time="1340" location="C:\Users\StevenMartel\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-4.5.3.jar">
+					<artifact name="avaje-ebeanorm-agent" type="jar" ext="jar" status="no" details="" size="218641" time="0" location="C:\Users\StevenMartel\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-4.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.5.3/avaje-ebeanorm-agent-4.5.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.persistence" name="persistence-api">
-			<revision name="1.0" status="release" pubdate="20060822124912" resolver="public" artresolver="public" homepage="http://www.jcp.org/en/jsr/detail?id=220" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
+			<revision name="1.0" status="release" pubdate="20060822124912" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcp.org/en/jsr/detail?id=220" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
 				<license name="Common Development and Distribution License (CDDL) v1.0" url="http://www.sun.com/cddl/cddl.html"/>
-				<metadata-artifact status="successful" details="" size="1307" time="478" location="C:\Users\StevenMartel\.ivy2\cache\javax.persistence\persistence-api\ivy-1.0.xml" searched="true" original-local-location="C:\Users\StevenMartel\.ivy2\cache\javax.persistence\persistence-api\ivy-1.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/persistence/persistence-api/1.0/persistence-api-1.0.pom"/>
+				<metadata-artifact status="no" details="" size="2776" time="0" location="C:\Users\StevenMartel\.ivy2\cache\javax.persistence\persistence-api\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/persistence/persistence-api/1.0/persistence-api-1.0.pom"/>
 				<caller organisation="org.avaje.ebeanorm" name="avaje-ebeanorm-agent" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="4.5.3"/>
 				<artifacts>
-					<artifact name="persistence-api" type="jar" ext="jar" status="successful" details="" size="52150" time="686" location="C:\Users\StevenMartel\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.jar">
+					<artifact name="persistence-api" type="jar" ext="jar" status="no" details="" size="52150" time="0" location="C:\Users\StevenMartel\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/persistence/persistence-api/1.0/persistence-api-1.0.jar"/>
 					</artifact>
 				</artifacts>
