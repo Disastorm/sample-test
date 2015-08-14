@@ -2,6 +2,8 @@ Hello,
 
 Thank you for looking at my test. 
 
+The relevant code and configurations are in the "app" and "conf" directory.
+
 For convenience, I have included the built project. It was built with Java 8 build 1.8.0_31-b13
 I have also included the Mocha test results in the sample-test/testResults directory.
 
