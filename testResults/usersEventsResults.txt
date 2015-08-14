@@ -1,0 +1,186 @@
+
+
+  Validate API spec. /api/users/events
+
+    ΓêÜ endpoint is correct.
+
+    ΓêÜ method is correct.
+
+    ΓêÜ unknown config keys
+    Validate request spec.
+
+      ΓêÜ contentType is correct.
+
+      ΓêÜ Validate rules reference.
+      Validate request param.
+
+        ΓêÜ datatype
+        Validate from param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate offset param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.min
+        Validate limit param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.min
+    Validate response spec.
+
+      ΓêÜ response is defined.
+
+      ΓêÜ data is defined.
+
+      ΓêÜ Validate rules reference.
+      Validate response param.
+
+        ΓêÜ datatype
+        Validate code param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate events param.
+
+          ΓêÜ datatype
+
+          ΓêÜ array
+          rules
+
+            ΓêÜ rule.required
+          Validate id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate name param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate start_date param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate company param.
+
+            ΓêÜ datatype
+            Validate id param.
+
+              ΓêÜ datatype
+              rules
+
+                ΓêÜ rule.required
+            Validate name param.
+
+              ΓêÜ datatype
+              rules
+
+                ΓêÜ rule.required
+
+  users_events
+
+    ΓêÜ Without from parameter
+
+    ΓêÜ Wrong limit
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 1,
+       name: 'Givery Event1',
+       company: [Object],
+       start_date: '2015-04-17 19:00:00' },
+     { id: 3,
+       name: 'Google Event1',
+       company: [Object],
+       start_date: '2015-04-19 14:00:00' },
+     { id: 2,
+       name: 'Givery Event2',
+       company: [Object],
+       start_date: '2015-04-19 19:00:00' },
+     { id: 5,
+       name: 'Apple Event1',
+       company: [Object],
+       start_date: '2015-05-02 14:00:00' },
+     { id: 4,
+       name: 'Google Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' },
+     { id: 6,
+       name: 'Apple Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' } ] }
+
+    ΓêÜ From 2015-04-01
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 3,
+       name: 'Google Event1',
+       company: [Object],
+       start_date: '2015-04-19 14:00:00' },
+     { id: 2,
+       name: 'Givery Event2',
+       company: [Object],
+       start_date: '2015-04-19 19:00:00' },
+     { id: 5,
+       name: 'Apple Event1',
+       company: [Object],
+       start_date: '2015-05-02 14:00:00' },
+     { id: 4,
+       name: 'Google Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' },
+     { id: 6,
+       name: 'Apple Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' } ] }
+
+    ΓêÜ From 2015-04-18
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 2,
+       name: 'Givery Event2',
+       company: [Object],
+       start_date: '2015-04-19 19:00:00' },
+     { id: 5,
+       name: 'Apple Event1',
+       company: [Object],
+       start_date: '2015-05-02 14:00:00' },
+     { id: 4,
+       name: 'Google Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' },
+     { id: 6,
+       name: 'Apple Event2',
+       company: [Object],
+       start_date: '2015-05-19 14:00:00' } ] }
+
+    ΓêÜ Specify offset
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 1,
+       name: 'Givery Event1',
+       company: [Object],
+       start_date: '2015-04-17 19:00:00' } ] }
+
+    ΓêÜ Specify limit
+
+
+  38 passing (93ms)
+

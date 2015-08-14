@@ -1,0 +1,186 @@
+
+
+  Validate API spec. /api/auth/login
+
+    ΓêÜ endpoint is correct.
+
+    ΓêÜ method is correct.
+
+    ΓêÜ unknown config keys
+    Validate request spec.
+
+      ΓêÜ contentType is correct.
+
+      ΓêÜ Validate rules reference.
+      Validate request param.
+
+        ΓêÜ datatype
+        Validate email param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate password param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+    Validate response spec.
+
+      ΓêÜ response is defined.
+
+      ΓêÜ data is defined.
+
+      ΓêÜ Validate rules reference.
+      Validate response param.
+
+        ΓêÜ datatype
+        Validate code param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate token param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate user param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+          Validate id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate name param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate group_id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+
+              ΓêÜ rule.min
+
+              ΓêÜ rule.max
+
+  login
+{ code: 500, message: 'Invalid credentials' }
+
+    ΓêÜ Wrong password
+{ code: 500, message: 'Invalid credentials' }
+
+    ΓêÜ Wrong username
+{ code: 200,
+  token: 'Sropor0zrict6FR1TGdyX--1Ykp5xs3XbYTaA40LNVRdRqo136htnsqM-iupPBOSauWircQF43N4e3uIFu1Gs118Q6KhrSjwRhmaNHFu3haIjA-yLbLVgUVjpKxhfcVTM4DYc-nxa3SKkMLx4QMHIQ==',
+  user: { id: 4, name: 'John Smith', group_id: 1 } }
+
+    ΓêÜ Success
+
+  Validate API spec. /api/users/reserve
+
+    ΓêÜ endpoint is correct.
+
+    ΓêÜ method is correct.
+
+    ΓêÜ login is correct
+
+    ΓêÜ unknown config keys
+    Validate request spec.
+
+      ΓêÜ contentType is correct.
+
+      ΓêÜ Validate rules reference.
+      Validate request param.
+
+        ΓêÜ datatype
+        Validate token param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate event_id param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate reserve param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+    Validate response spec.
+
+      ΓêÜ response is defined.
+
+      ΓêÜ data is defined.
+
+      ΓêÜ Validate rules reference.
+      Validate response param.
+
+        ΓêÜ datatype
+        Validate code param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate message param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+
+  Without token
+{ code: 401, message: 'Only students can create reservations.' }
+
+    ΓêÜ can not call with out login
+
+  With company user
+{ code: 200,
+  token: 'eaWk-vBWw9ADWPPO04egwR1hPqJZzwKa9PtADh5KhAdoXLzl35AEYU5dETF5JrFDcLE3TbmCCzbo86jswo5K7gtaIOljyhWZgAFEqm9rCluT46v1eh_Ye55Mq5NYwrGZ8kSqlCStthUMFwTSx07zzw==',
+  user: { id: 1, name: 'givery Inc.', group_id: 2 } }
+{ code: 401, message: 'Only students can create reservations.' }
+
+    ΓêÜ can not reserve event.
+
+  With student user
+{ code: 200,
+  token: 'ZYHrSF8Gv4RWyDjsnLT6NSTAAw2C_I9RkJKcJgGWAHQXaSLOuaBJjLbAYVMg3ArOP-36YgcgjoWP24E93fIhatbGDTyT--gsq2YgCXFxEmizxVnqhdEziWGIf9v6L4PoEI4BK_cSdkuX65flz3hpFQ==',
+  user: { id: 4, name: 'John Smith', group_id: 1 } }
+{ code: 200,
+  message: 'You have successfully reserved this event.' }
+
+    ΓêÜ can reserve an event.
+{ code: 501, message: 'You have already reserved this event.' }
+
+    ΓêÜ can not reserve already reaserved event.
+{ code: 200,
+  message: 'You have successfully unreserved this event.' }
+
+    ΓêÜ can unreserve already reaserved event.
+{ code: 502, message: 'You havn\'t reserved this event.' }
+
+    ΓêÜ can not unreserve not reaserved event.
+
+
+  58 passing (151ms)
+

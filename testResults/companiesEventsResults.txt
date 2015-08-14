@@ -1,0 +1,236 @@
+
+
+  Validate API spec. /api/auth/login
+
+    ΓêÜ endpoint is correct.
+
+    ΓêÜ method is correct.
+
+    ΓêÜ unknown config keys
+    Validate request spec.
+
+      ΓêÜ contentType is correct.
+
+      ΓêÜ Validate rules reference.
+      Validate request param.
+
+        ΓêÜ datatype
+        Validate email param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate password param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+    Validate response spec.
+
+      ΓêÜ response is defined.
+
+      ΓêÜ data is defined.
+
+      ΓêÜ Validate rules reference.
+      Validate response param.
+
+        ΓêÜ datatype
+        Validate code param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate token param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate user param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+          Validate id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate name param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate group_id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+
+              ΓêÜ rule.min
+
+              ΓêÜ rule.max
+
+  login
+{ code: 500, message: 'Invalid credentials' }
+
+    ΓêÜ Wrong password
+{ code: 500, message: 'Invalid credentials' }
+
+    ΓêÜ Wrong username
+{ code: 200,
+  token: 'INb95uoVakucd-E2a3UDdtP4GGt1z5rilSb3OZFc-X7dmZ2pe9o_8y6mNfN2PDHAD0zHSMVLYXTT2jdyJ18SJVHAEkq8NILqfXmAg3niP2ax-_tlAXvxVt6szm3FWayie0VO9DX-R54KmQZbFkgoPw==',
+  user: { id: 4, name: 'John Smith', group_id: 1 } }
+
+    ΓêÜ Success
+
+  Validate API spec. /api/companies/events
+
+    ΓêÜ endpoint is correct.
+
+    ΓêÜ method is correct.
+
+    ΓêÜ login is correct
+
+    ΓêÜ unknown config keys
+    Validate request spec.
+
+      ΓêÜ contentType is correct.
+
+      ΓêÜ Validate rules reference.
+      Validate request param.
+
+        ΓêÜ datatype
+        Validate token param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate from param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate offset param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.min
+        Validate limit param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.min
+    Validate response spec.
+
+      ΓêÜ response is defined.
+
+      ΓêÜ data is defined.
+
+      ΓêÜ Validate rules reference.
+      Validate response param.
+
+        ΓêÜ datatype
+        Validate code param.
+
+          ΓêÜ datatype
+          rules
+
+            ΓêÜ rule.required
+        Validate events param.
+
+          ΓêÜ datatype
+
+          ΓêÜ array
+          rules
+
+            ΓêÜ rule.required
+          Validate id param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate name param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate start_date param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+          Validate number_of_attendees param.
+
+            ΓêÜ datatype
+            rules
+
+              ΓêÜ rule.required
+
+  Without token
+{ code: 401 }
+
+    ΓêÜ can not call with out login
+
+  With student user
+{ code: 200,
+  token: 'LAYYpb1EuEFNYlh5Kuoi2S-eHDRqt-y-ebHYD8E_-dWcT32UDPS2okcJ4NUuR8Kfw-_zp-BfL44mMXPzNK7v9ykNDzl1j2i_lUoJsuYoQWhHdPlrx9HV7cPF3CgE9cQMSYGUO86JrpG_lwERnZrCIQ==',
+  user: { id: 4, name: 'John Smith', group_id: 1 } }
+{ code: 401 }
+
+    ΓêÜ can not call.
+
+  With company user
+{ code: 200,
+  token: 'b4H7phT9_D3hEmuGRIKt9LBn5BwMED-bhNqcBP0OxJ8ZJeMBrsgmpJF3cQmnq-5EAPgd7RRI4TAs2zJ0mggfb52ti-xb8I7BRTqkGBxx2clRgyXZGyMC7d8JzVIijk1SzNQeBztm25NatFcej8aV7w==',
+  user: { id: 1, name: 'givery Inc.', group_id: 2 } }
+
+    ΓêÜ Without from parameter
+
+    ΓêÜ Wrong limit
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 1,
+       name: 'Givery Event1',
+       start_date: '2015-04-17 19:00:00',
+       number_of_attendees: 2 },
+     { id: 2,
+       name: 'Givery Event2',
+       start_date: '2015-04-19 19:00:00',
+       number_of_attendees: 0 } ] }
+
+    ΓêÜ From 2015-04-01 (118ms)
+{ code: 200, message: null, events: [] }
+
+    ΓêÜ From 2015-05-01
+{ code: 200, message: null, events: [] }
+
+    ΓêÜ Specify offset
+{ code: 200,
+  message: null,
+  events: 
+   [ { id: 2,
+       name: 'Givery Event2',
+       start_date: '2015-04-19 19:00:00',
+       number_of_attendees: 0 } ] }
+
+    ΓêÜ Specify offset and limit
+
+
+  71 passing (305ms)
+
