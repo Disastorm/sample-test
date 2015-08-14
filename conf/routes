@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.ApplicationController.health()
+POST    /api/companies/events       controllers.CompaniesController.events(q: models.requests.EventsRequest)
+POST    /api/auth/login       controllers.AuthenticationController.login(q: models.requests.LoginRequest)
+GET    /api/users/events       controllers.UsersController.events(q: models.requests.EventsRequest)
+POST    /api/users/reserve       controllers.UsersController.reserve(q: models.requests.ReservationRequest)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
