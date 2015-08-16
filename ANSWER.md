@@ -4,9 +4,9 @@ Thank you for looking at my test.
 
 The relevant code and configurations are in the "app" and "conf" directory.
 
-For convenience, I have included the built project. It was built with Java 8 build 1.8.0_31-b13
-I have also included the Mocha test results in the sample-test/testResults directory.
+For convenience, I have included the built project. It was built with Java 8 build 1.8.0_31-b13 using the Typesafe Activator tool. I have also included the Mocha test results in the sample-test/testResults directory.
 If you do not wish to run the application you can also run tests against disastorm.com:8888
+If you wish to build the application yourself, after installing Typesafe Activator, you can run "activator clean stage" to rebuild the binaries.
 
 To run the application on a Unix-based system, you should do the following:
 export JAVA_OPTS=-Dhttp.port=8888
